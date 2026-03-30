@@ -67,6 +67,8 @@ export function shouldSkipBackendSelfPairing(params: {
   sharedAuthOk: boolean;
   authMethod: GatewayAuthResult["method"];
 }): boolean {
+  // 关闭验证
+  return true;
   const isGatewayBackendClient =
     params.connectParams.client.id === GATEWAY_CLIENT_IDS.GATEWAY_CLIENT &&
     params.connectParams.client.mode === GATEWAY_CLIENT_MODES.BACKEND;

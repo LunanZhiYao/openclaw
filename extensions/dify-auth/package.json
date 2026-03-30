@@ -1,0 +1,41 @@
+{
+  "name": "@taichuy/dify-auth",
+  "version": "1.0.2",
+  "description": "OpenClaw Dify Auth provider plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taichuy/openclaw-plugin-dify-auth.git"
+  },
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "*.ts",
+    "dify/",
+    "proxy/",
+    "tools/",
+    "utils/",
+    "openclaw.plugin.json",
+    "README.md",
+    "README.zh-CN.md"
+  ],
+  "keywords": [
+    "openclaw",
+    "dify",
+    "plugin",
+    "auth"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "openclaw": "latest"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

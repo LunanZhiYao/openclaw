@@ -235,6 +235,10 @@ function createGoogleThinkingPayloadWrapper(
             thinkingLevel,
           });
         }
+        if (payload && typeof payload === "object") {
+          const payloadObj = payload as Record<string, unknown>;
+          if (payloadObj.user === void 0 && typeof options?.sessionId === "string") payloadObj.user = options.sessionId;
+        }
         return onPayload?.(payload, model);
       },
     });
